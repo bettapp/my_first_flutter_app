@@ -47,18 +47,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController mC = TextEditingController(text: "0");
-  TextEditingController nC = TextEditingController(text: "0");
+  TextEditingController mC = TextEditingController(text: "0"); //used by Lineare Funktion
+  TextEditingController nC = TextEditingController(text: "0"); //used by Lineare Funktion
 
-  TextEditingController aC = TextEditingController(text: "0");
-  TextEditingController bC = TextEditingController(text: "0");
-  TextEditingController cC = TextEditingController(text: "0");
+  TextEditingController aC = TextEditingController(text: "0");  //used by Quadratische Funktion
+  TextEditingController bC = TextEditingController(text: "0");  //used by Quadratische Funktion
+  TextEditingController cC = TextEditingController(text: "0");  //used by Quadratische Funktion
 
-  int selection = 0;
-  int function = 0;
+  int selection = 0;  //Selector for Home Page (0) / Lineare o. Quadratische Funktion (1)
+  int function = 0; //Selector for Lineare Funktion (0) / Quadratische Funktion (1)
 
   double m = 0;
-  double n= 0;
+  double n = 0;
 
   double a = 0;
   double b = 0;
@@ -75,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       n = double.parse(nC.text);
     });
   }
+
   void selectQ() {
     setState(() {
       selection++;
@@ -83,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
       c = double.parse(cC.text);
     });
   }
+
   void reset(){
     setState(() {
       selection = 0;
@@ -90,25 +92,22 @@ class _MyHomePageState extends State<MyHomePage> {
       b = 0;
       c = 0;
     });
-  }
+  } //resets selection, a, b, c
 
-  double nS(double m, double n)
-  {
+  double nS(double m, double n) {
     double x;
     n /= m;
     x = -n;
     return x;
   }
 
-  double nP(double a, double b, double c)
-  {
+  double nP(double a, double b, double c) {
     double x;
     x = (-b + sqrt(pow(b, 2) - 4 * a * c)) / (2 * a);
     return x;
   }
 
-  double nN(double a, double b, double c)
-  {
+  double nN(double a, double b, double c) {
     double x;
     x = (-b - sqrt(pow(b, 2) - 4 * a * c)) / (2 * a);
     return x;
@@ -149,8 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    if(selection == 0)
-    {
+    if(selection == 0) {
       return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
@@ -190,8 +188,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       );
-    }
-    if(selection == 1) {
+    } //creates the buttons / home screen
+    else if(selection == 1) {
       if (function == 0) {
         return Scaffold(
           appBar: AppBar(
@@ -310,9 +308,8 @@ class _MyHomePageState extends State<MyHomePage> {
             )
         );
       }
-    }
-    else if(selection == 2)
-    {
+    } // creates the Lienare Funktion page
+    else if(selection == 2) {
       if(function == 0)
       {
         x1 = nS(m, n);
@@ -402,6 +399,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       }
-    }
+    } // creates the Quadratische Funktion page
   }
 }
