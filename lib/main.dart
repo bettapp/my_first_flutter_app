@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import './calculator.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -177,13 +179,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     setState(() {
                       selection = 1;
                       function = 1;
-                    });
+                      }
+                    );
                   },
                   child: Text(
                     "Quadratische Funktion",
                   ),
                 ),
-              )
+              ),
+              Align(
+                alignment: Alignment(0, 0),
+                child: FloatingActionButton(
+                  onPressed: (){
+                    setState(() {
+                      selection = 3;
+                      function = 0;
+                    });
+                  },
+                  child: Text(
+                    "Calculator",
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -400,5 +417,8 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       }
     } // creates the Quadratische Funktion page
+    else if(selection == 3){
+      runApp(Calculator());
+    }
   }
 }
