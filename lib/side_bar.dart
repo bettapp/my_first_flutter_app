@@ -13,11 +13,12 @@ class SideBar extends StatelessWidget {
                 DrawerHeader(
                   decoration: BoxDecoration(
                     color: Colors.white,
-                  ),
+                  ), child: null,
                 ),
                 ListTile(
-                  leading: Icon(Icons.block,
-                    color: Colors.black),
+                  leading: Icon(
+                      Icons.block,
+                      color: Colors.black),
                   title: Text('Algebra'),
                   textColor: Colors.black,
                 ),
@@ -25,7 +26,8 @@ class SideBar extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 ListTile(
-                  leading: Icon(Icons.block,
+                  leading: Icon(
+                      Icons.block,
                       color: Colors.black),
                   title: Text('Trigonometrie'),
                   textColor: Colors.black,
@@ -34,8 +36,10 @@ class SideBar extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 ListTile(
-                  leading: Icon(Icons.block,
-                      color: Colors.black),
+                  leading: Icon(
+                      Icons.block,
+                      color: Colors.black
+                  ),
                   title: Text('Analysis'),
                   textColor: Colors.black,
                 ),
@@ -43,7 +47,8 @@ class SideBar extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 ListTile(
-                  leading: Icon(Icons.block,
+                  leading: Icon(
+                      Icons.block,
                       color: Colors.black),
                   title: Text('Statistik'),
                   textColor: Colors.black,
@@ -52,7 +57,8 @@ class SideBar extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 ListTile(
-                  leading: Icon(Icons.block,
+                  leading: Icon(
+                      Icons.block,
                       color: Colors.black),
                   title: Text('Lineare Algebra'),
                   textColor: Colors.black,
@@ -61,8 +67,10 @@ class SideBar extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 ListTile(
-                  leading: Icon(Icons.block,
-                      color: Colors.black),
+                  leading: Icon(
+                      Icons.block,
+                      color: Colors.black
+                  ),
                   title: Text('Graphisch darstellen'),
                   textColor: Colors.black,
                 ),

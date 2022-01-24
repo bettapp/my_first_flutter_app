@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_app/side_bar.dart';
 import 'dart:math';
 
 import './calculator.dart';
+import './side_bar.dart';
 
 void main() {
   runApp(MyApp());
