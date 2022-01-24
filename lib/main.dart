@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/side_bar.dart';
 import 'dart:math';
 
 import './calculator.dart';
@@ -152,6 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     if(selection == 0) {
       return Scaffold(
+        drawer: SideBar(),
         appBar: AppBar(
           title: Text(widget.title),
         ),
