@@ -418,7 +418,11 @@ class _MyHomePageState extends State<MyHomePage> {
       }
     } // creates the Quadratische Funktion page
     else if(selection == 3){
-      runApp(Calculator());
+      return Container(
+        height: 0,
+        width: 0,
+        child: Calculator(),
+      );
     }
   }
 }
