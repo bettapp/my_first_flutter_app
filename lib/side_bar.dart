@@ -19,8 +19,9 @@ class SideBar extends StatelessWidget {
                   leading: Icon(
                       Icons.block,
                       color: Colors.black),
-                  title: Text('Algebra'),
-                  textColor: Colors.black,
+                  title: Text(
+                    'Algebra',
+                    style: TextStyle(color: Colors.black, fontSize: 20)),
                 ),
                 Divider(
                   color: Colors.grey,
