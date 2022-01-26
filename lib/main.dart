@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'test',
+      title: 'Calculator',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -118,9 +118,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   String qFunction(){
     String f;
-    String vA;
-    String vB;
-    String vC;
+    String vA = '';
+    String vB = '';
+    String vC = '';
     if(a >= 0)
     {
       vA = " ";
@@ -426,5 +426,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Calculator(),
       );
     }
+    return Container(
+      child: Text('Something went wrong.',
+          textAlign: TextAlign.center),
+      height: double.infinity,
+      width: double.infinity,
+    );
   }
 }
+
