@@ -1,17 +1,19 @@
 # my_first_flutter_app
 
-A new Flutter application.
+In this Project we program a calculator application using Flutter/Dart.
+The project is accompanied by the 'Bettina von Arnim Gymnasium' in Germany, Dormagen.
+Feel free to Commit!
 
-## Getting Started
+!! On creating new Widgets, please include 'drawer: SideBar()' within 'return Scaffold()' to include the navigation bar !!
 
-This project is a starting point for a Flutter application.
+## Contact
 
-A few resources to get you started if this is your first Flutter project:
+This Project has a discord-server!
+Join at: [Discord Server](https://discord.gg/wBHNFZTkJP)
+
+## Useful Links
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [online documentation](https://flutter.dev/docs)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# my_first_flutter_app" 
