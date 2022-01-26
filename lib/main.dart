@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Test'),
+      home: MyHomePage(title: 'Calcualtor'),
     );
   }
 }
