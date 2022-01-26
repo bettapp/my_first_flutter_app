@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:my_first_flutter_app/side_bar.dart';
 
+import './side_bar.dart';
+
 void main(){
   runApp(Calculator());
 }
@@ -117,6 +119,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
     return Scaffold(
       drawer: SideBar(),
       appBar: AppBar(title: Text('Calculator')),
+      drawer: SideBar(),
       body: Column(
         children: <Widget>[
           Container(
