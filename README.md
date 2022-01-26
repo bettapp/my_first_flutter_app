@@ -4,7 +4,7 @@ In this Project we program a calculator application using Flutter/Dart.
 The project is accompanied by the 'Bettina von Arnim Gymnasium' in Germany, Dormagen.
 Feel free to Commit!
 
-!! On creating new Widgets, please include 'drawer: SideBar()' within 'return Scaffold()' to include the navigation bar !!
+!! On creating new Widgets, please include 'drawer: SideBar()' within 'return Scaffold()' to include the navigation bar !! [Why? That's why](https://discord.com/channels/934053813957033994/934053813957033997/935977955719524394)
 
 ## Contact
 
