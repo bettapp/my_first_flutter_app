@@ -119,7 +119,6 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
     return Scaffold(
       drawer: SideBar(),
       appBar: AppBar(title: Text('Calculator')),
-      drawer: SideBar(),
       body: Column(
         children: <Widget>[
           Container(
