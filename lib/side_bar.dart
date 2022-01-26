@@ -25,8 +25,8 @@ class SideBar extends StatelessWidget {
                     'Startseite',
                     style: TextStyle(color: Colors.black, fontSize: 20),
                   ),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
+                  onTap:  () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'Calculator')));
                   },
                 ),
                 ListTile(

@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.red,
       ),
+      home: MyHomePage(title: 'Test'),
     );
   }
 }
@@ -425,11 +426,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Calculator(),
       );
     }
-    return Container(
-      child: Text('Something went wrong.',
-          textAlign: TextAlign.center),
-      height: double.infinity,
-      width: double.infinity,
+    return Scaffold(
+      drawer: SideBar(),
+      body: Container(
+        child: Text(
+          'Something went wrong',
+          textAlign: TextAlign.center,
+        ),
+      ),
     );
   }
 }
