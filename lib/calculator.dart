@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
+import 'package:my_first_flutter_app/side_bar.dart';
 
 void main(){
   runApp(Calculator());
@@ -82,7 +83,6 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
   }
 
   Widget buildButton(String buttonText, double buttonHeight, Color buttonColor){
-
     return Container(
       height: MediaQuery.of(context).size.height * 0.1 * buttonHeight,
       color: buttonColor,
@@ -115,6 +115,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideBar(),
       appBar: AppBar(title: Text('Calculator')),
       body: Column(
         children: <Widget>[

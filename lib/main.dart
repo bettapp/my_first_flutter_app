@@ -26,13 +26,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Test'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -43,7 +42,7 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  //final String title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -155,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
       return Scaffold(
         drawer: SideBar(),
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text('Hauptmenü'),
         ),
         body: Center(
           child: Stack(
@@ -212,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage> {
       if (function == 0) {
         return Scaffold(
           appBar: AppBar(
-            title: Text(widget.title),
+            title: Text('Test'),
           ),
           body: Center(
               child: Stack(
@@ -264,7 +263,7 @@ class _MyHomePageState extends State<MyHomePage> {
       else if (function == 1) {
         return Scaffold(
             appBar: AppBar(
-              title: Text(widget.title),
+              title: Text('Test1'),
             ),
             body: Center(
                 child: Stack(
@@ -334,7 +333,7 @@ class _MyHomePageState extends State<MyHomePage> {
         x1 = nS(m, n);
         return Scaffold(
           appBar: AppBar(
-            title: Text(widget.title),
+            title: Text('Test2'),
           ),
           body: Center(
             child: Stack(
@@ -371,7 +370,7 @@ class _MyHomePageState extends State<MyHomePage> {
         qfx = qFunction();
         return Scaffold(
           appBar: AppBar(
-            title: Text(widget.title),
+            title: Text('Test3'),
           ),
           body: Center(
             child: Stack(

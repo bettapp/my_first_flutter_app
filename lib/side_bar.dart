@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/main.dart';
 
 class SideBar extends StatelessWidget {
 
@@ -17,21 +18,36 @@ class SideBar extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(
-                      Icons.block,
-                      color: Colors.black),
+                    Icons.home,
+                    color: Colors.black
+                  ),
                   title: Text(
-                    'Algebra',
-                    style: TextStyle(color: Colors.black, fontSize: 20)),
+                    'Startseite',
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                  ),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
+                  },
+                ),
+                ListTile(
+                  leading: Icon(
+                  Icons.block,
+                  color: Colors.black
+                  ),
+                  title: Text(
+                  'Algebra',
+                  style: TextStyle(color: Colors.black, fontSize: 20)
+                  ),
                 ),
                 Divider(
                   color: Colors.grey,
                 ),
                 ListTile(
                   leading: Icon(
-                      Icons.block,
-                      color: Colors.black),
-                  title: Text('Trigonometrie'),
-                  textColor: Colors.black,
+                  Icons.block,
+                  color: Colors.black
+                  ),
+                  title: Text('Trigonometrie')
                 ),
                 Divider(
                   color: Colors.grey,
@@ -69,8 +85,8 @@ class SideBar extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(
-                      Icons.block,
-                      color: Colors.black
+                    Icons.block,
+                    color: Colors.black
                   ),
                   title: Text('Graphisch darstellen'),
                   textColor: Colors.black,
@@ -79,22 +95,22 @@ class SideBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
             ),
           ),
-          SliverFillRemaining(child :
-            Align(child:
-              ListTile(
-                leading: Icon(Icons.arrow_back,
-                color: Colors.black
-                ),
-                title: Text('Zurück'),
-                textColor: Colors.black,
-                onTap: () => Navigator.pop(context),
+        SliverFillRemaining(child :
+          Align(child:
+            ListTile(
+              leading: Icon(Icons.arrow_back,
+              color: Colors.black
               ),
-              alignment: Alignment.bottomCenter,
-              ),
-              hasScrollBody: false,
-          )
-        ],
-      ),
-    );
+              title: Text('Zurück'),
+              textColor: Colors.black,
+              onTap: () => Navigator.pop(context),
+            ),
+            alignment: Alignment.bottomCenter,
+            ),
+            hasScrollBody: false,
+            )
+          ],
+        ),
+      );
+    }
   }
-}
