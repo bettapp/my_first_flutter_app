@@ -29,14 +29,17 @@ class SideBar extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'Calculator')));
                   },
                 ),
+                Divider(
+                  color: Colors.grey,
+                ),
                 ListTile(
                   leading: Icon(
                   Icons.block,
                   color: Colors.black
                   ),
                   title: Text(
-                  'Algebra',
-                  style: TextStyle(color: Colors.black, fontSize: 20)
+                      'Analysis',
+                      style: TextStyle(color: Colors.black, fontSize: 20)
                   ),
                 ),
                 Divider(
@@ -47,7 +50,10 @@ class SideBar extends StatelessWidget {
                   Icons.block,
                   color: Colors.black
                   ),
-                  title: Text('Trigonometrie')
+                  title: Text(
+                      'Geometrie',
+                      style: TextStyle(color: Colors.black, fontSize: 20)
+                ),
                 ),
                 Divider(
                   color: Colors.grey,
@@ -57,7 +63,9 @@ class SideBar extends StatelessWidget {
                       Icons.block,
                       color: Colors.black
                   ),
-                  title: Text('Analysis'),
+                  title: Text('Wahrscheinlichkeit',
+                      style: TextStyle(color: Colors.black, fontSize: 20)
+                  ),
                   textColor: Colors.black,
                 ),
                 Divider(
@@ -67,7 +75,9 @@ class SideBar extends StatelessWidget {
                   leading: Icon(
                       Icons.block,
                       color: Colors.black),
-                  title: Text('Statistik'),
+                  title: Text('Statistik',
+                      style: TextStyle(color: Colors.black, fontSize: 20)
+                  ),
                   textColor: Colors.black,
                 ),
                 Divider(
@@ -77,7 +87,9 @@ class SideBar extends StatelessWidget {
                   leading: Icon(
                       Icons.block,
                       color: Colors.black),
-                  title: Text('Lineare Algebra'),
+                  title: Text('Lineare Algebra',
+                      style: TextStyle(color: Colors.black, fontSize: 20)
+                  ),
                   textColor: Colors.black,
                 ),
                 Divider(
@@ -88,7 +100,9 @@ class SideBar extends StatelessWidget {
                     Icons.block,
                     color: Colors.black
                   ),
-                  title: Text('Graphisch darstellen'),
+                  title: Text('Graphisch darstellen',
+                      style: TextStyle(color: Colors.black, fontSize: 20)
+                  ),
                   textColor: Colors.black,
                 ),
               ],
@@ -101,7 +115,9 @@ class SideBar extends StatelessWidget {
               leading: Icon(Icons.arrow_back,
               color: Colors.black
               ),
-              title: Text('Zurück'),
+              title: Text('Zurück',
+                  style: TextStyle(color: Colors.black, fontSize: 20)
+              ),
               textColor: Colors.black,
               onTap: () => Navigator.pop(context),
             ),
