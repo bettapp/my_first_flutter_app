@@ -3,6 +3,7 @@ import 'dart:math';
 
 import './calculator.dart';
 import './side_bar.dart';
+import 'package:my_first_flutter_app/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Calcualtor'),
+      home: MySplashScreen(),
+      //home: MyHomePage(title: 'Calcualtor'),
     );
   }
 }
