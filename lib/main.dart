@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-
+//import 'package:flutter_tex/flutter_tex.dart';
+import 'package:catex/catex.dart';
 import './calculator.dart';
 import './side_bar.dart';
 import 'package:my_first_flutter_app/splashscreen.dart';
@@ -32,6 +33,15 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+/*class Entry {
+  final String title;
+  final List<Entry>
+      children;
+  Entry(this.title, [this.children] = const <Entry>[]]);
+}
+// this is the entire multi-level list displayed by this app
+final <List>
+*/
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -72,6 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
   double x2 = 0;
 
   late String qfx;
+  late String a1 = a.toString();
+  late String b1 = b.toString();
+  late String c1 = c.toString();
 
   void selectF(){
     setState(() {
@@ -85,8 +98,11 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       selection++;
       a = double.parse(aC.text);
+      a1 = a.toString();
       b = double.parse(bC.text);
+      b1 = b.toString();
       c = double.parse(cC.text);
+      c1 = c.toString();
     });
   }
 
@@ -331,12 +347,11 @@ class _MyHomePageState extends State<MyHomePage> {
       }
     } // creates the Lienare Funktion page
     else if(selection == 2) {
-      if(function == 0)
-      {
+      if (function == 0) {
         x1 = nS(m, n);
         return Scaffold(
           appBar: AppBar(
-            title: Text('Test2'),
+            title: Text('Lineare Gleichung'),
           ),
           body: Center(
             child: Stack(
@@ -367,23 +382,23 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       }
-      if(function == 1) {
+      if (function == 1) {
         x1 = nP(a, b, c);
         x2 = nN(a, b, c);
         qfx = qFunction();
         return Scaffold(
           appBar: AppBar(
-            title: Text('Test3'),
+            title: Text('Quadratische Gleichung'),
           ),
           body: Center(
             child: Stack(
-              children: <Widget>[
-                Align(
-                    alignment: Alignment(0, -0.2),
-                    child: Text(
-                      "x1 ist:",
-                    )
+            children: <Widget>[
+              Align(
+                alignment: Alignment(0, -0.2),
+                child: Text(
+                  "Die erste Lösung x1 ist:",
                 ),
+              ),
                 Align(
                   alignment: Alignment(0, -0.1),
                   child: Text(
@@ -393,7 +408,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Align(
                   alignment: Alignment(0, 0.1),
                   child: Text(
-                    "x2 ist:",
+                    "Die zweite Lösung x2 ist:",
                   ),
                 ),
                 Align(
@@ -404,8 +419,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Align(
                   alignment: Alignment.topCenter,
-                  child: Text(
-                      qfx
+                  child: DefaultTextStyle(
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      child: Column(
+                        children: [
+                          CaTeX(qfx),
+                          SizedBox(height: 35,),
+                          Text(r'Mit der abc-Formel ist die Diskriminate:'),
+                          SizedBox(height: 35,),
+                          CaTeX(r'x_{1/2} = \frac {-b\pm \sqrt{b^2-4ac}}{2a}'),
+                          SizedBox(height: 35,),
+                          CaTeX(r'x_{1/2} = \frac {-'+b1+r'\pm \sqrt{'+b1+r'^2- 4*'+ a1 +r'*' +c1+r'}}{2'+r'*'+ a1+r'}'),
+                          SizedBox(height: 35,),
+                          Text(r'Daraus folgt:'),
+                        ]
+                      )
                   ),
                 ),
                 Align(
@@ -420,7 +448,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       }
-    } // creates the Quadratische Funktion page
+    } // creates the Quadratische Funktion page  */
     else if(selection == 3){
       return Container(
         height: 0,
