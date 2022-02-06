@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 //import 'package:flutter_tex/flutter_tex.dart';
 import 'package:catex/catex.dart';
+
 import './calculator.dart';
 import './side_bar.dart';
-import 'package:my_first_flutter_app/splashscreen.dart';
+import './splashscreen.dart';
 
 void main() {
   runApp(MyApp());
