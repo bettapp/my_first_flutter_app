@@ -50,15 +50,52 @@ double cubeArea(double a){
   return area;
 }
 
-double pyramidVolume(bool squareBase, double c, double cH, double h){
-  if (squareBase == true){
-    double volume = 1 / 3 * squareArea(c) * h;
-    return volume;
-  }
-  else if(squareBase == false){
-    double volume = 1 / 3 * triangleArea(c, cH) + h;
-    return volume;
-  }
-  return 666; //to fix 'the body might return null'
-} // unknown if it works
+double cuboidVolume(double a, double b, double c){
+  double volume = a * b * c;
+  return volume;
+}
 
+double cuboidArea(double a, double b, double c){
+  double area = 2 * rectangleArea(a, b) + 2 * rectangleArea(a, c) + 2 * rectangleArea(b, c);
+  return area;
+}
+
+double coneVolume(double r, double h){
+  double volume = 1 / 3 * circleArea(r) * h;
+  return volume;
+}
+
+double coneArea(double r, double s){
+  double area = circleArea(r) + pi * r * s;
+  return area;
+}
+
+double pyramidVolume(double a, double h){
+  double volume = 1 / 3 * squareArea(a) * h;
+  return volume;
+}
+
+double pyramidArea(double a, double ha, double h){
+  double volume = squareArea(a) + 2 * rectangleArea(a, ha);
+  return volume;
+}
+
+double sphereVolume(double r){
+  double volume = 4 / 3 * pi * r * r * r;
+  return volume;
+}
+
+double sphereArea(double r){
+  double area = 4 * pi * r * r;
+  return area;
+}
+
+double cylinderVolume(double r, double h){
+  double volume = circleArea(r) * h;
+  return volume;
+}
+
+double cylinderArea(double r, double h){
+  double area = 2 * pi * r * (r + h);
+  return area;
+}
