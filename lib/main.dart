@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:catex/catex.dart';
 
 import './calculator.dart';
-import './side_bar.dart';
+import 'SideBars/side_bar.dart';
 import './splashscreen.dart';
 
 void main() {

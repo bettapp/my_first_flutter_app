@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/SideBars/analysis_sidebar.dart';
 import 'package:my_first_flutter_app/main.dart';
 
 class SideBar extends StatelessWidget {
@@ -26,7 +27,7 @@ class SideBar extends StatelessWidget {
                     style: TextStyle(color: Colors.black, fontSize: 20),
                   ),
                   onTap:  () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'Calculator')));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => AnalysisSideBar()));
                   },
                 ),
                 Divider(
@@ -41,6 +42,7 @@ class SideBar extends StatelessWidget {
                       'Analysis',
                       style: TextStyle(color: Colors.black, fontSize: 20)
                   ),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AnalysisSideBar())),
                 ),
                 Divider(
                   color: Colors.grey,
