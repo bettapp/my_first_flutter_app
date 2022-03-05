@@ -42,8 +42,10 @@ class SideBar extends StatelessWidget {
                       'Analysis',
                       style: TextStyle(color: Colors.black, fontSize: 20)
                   ),
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AnalysisSideBar())),
-                ),
+                  onTap: (){
+                    Navigator.pop(context);
+    Navigator.push(context, MaterialPageRoute(builder: (context) => AnalysisSideBar()));
+    }),
                 Divider(
                   color: Colors.grey,
                 ),
