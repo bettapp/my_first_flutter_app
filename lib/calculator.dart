@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
-import 'package:my_first_flutter_app/side_bar.dart';
+import 'package:my_first_flutter_app/SideBars/side_bar.dart';
 
-import './side_bar.dart';
+import 'SideBars/side_bar.dart';
 
 void main(){
   runApp(Calculator());
