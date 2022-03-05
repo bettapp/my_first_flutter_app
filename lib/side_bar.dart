@@ -23,62 +23,11 @@ class SideBar extends StatelessWidget {
                   ),
                   title: Text(
                     'Startseite',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(color: Colors.black),
                   ),
                   onTap:  () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'Calculator')));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'test')));
                   },
-                ),
-                ListTile(
-                  leading: Icon(
-                  Icons.block,
-                  color: Colors.black
-                  ),
-                  title: Text(
-                  'Algebra',
-                  style: TextStyle(color: Colors.black, fontSize: 20)
-                  ),
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                  Icons.block,
-                  color: Colors.black
-                  ),
-                  title: Text('Trigonometrie')
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                      Icons.block,
-                      color: Colors.black
-                  ),
-                  title: Text('Analysis'),
-                  textColor: Colors.black,
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                      Icons.block,
-                      color: Colors.black),
-                  title: Text('Statistik'),
-                  textColor: Colors.black,
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                      Icons.block,
-                      color: Colors.black),
-                  title: Text('Lineare Algebra'),
-                  textColor: Colors.black,
                 ),
                 Divider(
                   color: Colors.grey,
@@ -88,8 +37,73 @@ class SideBar extends StatelessWidget {
                     Icons.block,
                     color: Colors.black
                   ),
-                  title: Text('Graphisch darstellen'),
-                  textColor: Colors.black,
+                  title: Text(
+                  'Algebra',
+                  style: TextStyle(color: Colors.black)
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.block,
+                    color: Colors.black
+                  ),
+                  title: Text(
+                    'Trigonometrie',
+                    style: TextStyle(color: Colors.black)
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.block,
+                    color: Colors.black
+                  ),
+                  title: Text(
+                    'Analysis',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.block,
+                    color: Colors.black),
+                  title: Text(
+                    'Statistik',
+                    style: TextStyle(color: Colors.black)
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.block,
+                    color: Colors.black),
+                  title: Text(
+                    'Lineare Algebra',
+                    style: TextStyle(color: Colors.black)
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.block,
+                    color: Colors.black
+                  ),
+                  title: Text(
+                    'Graphisch darstellen',
+                    style: TextStyle(color: Colors.black)
+                  ),
                 ),
               ],
               crossAxisAlignment: CrossAxisAlignment.stretch,
