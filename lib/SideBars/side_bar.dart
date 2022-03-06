@@ -1,16 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_app/SideBars/analysis_sidebar.dart';
-import 'package:my_first_flutter_app/main.dart';
 
 class SideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: CustomScrollView(
-        slivers: <Widget>[
-          SliverToBoxAdapter(
-            child: Column(
+      child: ListView(
+        children: <Widget>[
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.white,
+            ), child: null,
+          ),
+          ExpansionTile(
+            leading: Icon(
+              Icons.home,
+              color: Colors.black
+            ),
+            title: Text("Analysis"),
+          children: <Widget>[Text("children 1"), Text("children 2")],
+          )
+        ],
+      ),
+    );
+            /*child: Column(
               children: [
                 DrawerHeader(
                   decoration: BoxDecoration(
@@ -27,7 +40,6 @@ class SideBar extends StatelessWidget {
                     style: TextStyle(color: Colors.black, fontSize: 20),
                   ),
                   onTap:  () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => AnalysisSideBar()));
                   },
                 ),
                 Divider(
@@ -42,7 +54,10 @@ class SideBar extends StatelessWidget {
                       'Analysis',
                       style: TextStyle(color: Colors.black, fontSize: 20)
                   ),
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AnalysisSideBar())),
+                  onTap: () {
+                    Navigator.pop(context);
+
+                  }
                 ),
                 Divider(
                   color: Colors.grey,
@@ -109,8 +124,8 @@ class SideBar extends StatelessWidget {
                 ),
               ],
               crossAxisAlignment: CrossAxisAlignment.stretch,
-            ),
-          ),
+            ),*/
+         /*+),
         SliverFillRemaining(child :
           Align(child:
             ListTile(
@@ -125,10 +140,7 @@ class SideBar extends StatelessWidget {
             ),
             alignment: Alignment.bottomCenter,
             ),
-            hasScrollBody: false,
-            )
-          ],
-        ),
-      );
+            hasScrollBody: false,*/
+
     }
   }
