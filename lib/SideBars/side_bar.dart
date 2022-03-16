@@ -18,8 +18,16 @@ class SideBar extends StatelessWidget {
               color: Colors.black
             ),
             title: Text("Analysis"),
-          children: <Widget>[Text("children 1"), Text("children 2")],
-          )
+          children: <Widget>[Text("Lineare Gleichungen"), Text("Quadratische Gleichungen"), Text("Normalform -> Scheitelpunktform"), Text("Scheitelpunktform -> Normalform"), Text("Ganzrationale Gleichungen")],
+          ),
+          ExpansionTile(
+            leading: Icon(
+                Icons.block,
+                color: Colors.black
+            ),
+            title: Text("Stochastik"),
+            children: <Widget>[Text("Thema 1"), Text("Thema 2")],
+          ),
         ],
       ),
     );
