@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flutter",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart",
+            "args": ["--no-sound-null-safety"],
+            "dart.flutterTestAdditionalArgs": ["--no-sound-null-safety"],
+            "dart.flutterAdditionalArgs": ["--no-sound-null-safety"],
+            "dart.vmAdditionalArgs": ["--no-sound-null-safety"]
+        }
+    ]
+}
