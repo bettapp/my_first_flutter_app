@@ -6,10 +6,10 @@ class SideBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child:
-        CustomScrollView(
+        /*CustomScrollView(
           physics: NeverScrollableScrollPhysics(),
           slivers: <Widget>[
-            SliverToBoxAdapter(child:
+            SliverToBoxAdapter(child:*/
               ListView(
                 children: <Widget>[
                   DrawerHeader(
@@ -110,8 +110,8 @@ class SideBar extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-          SliverFillRemaining(child :
+            );
+          /*SliverFillRemaining(child :
             Align(child:
               ListTile(
                 leading: Icon(Icons.arrow_back,
@@ -125,6 +125,6 @@ class SideBar extends StatelessWidget {
             ),
           ]
         ),
-      );
+      );*/
     }
   }
