@@ -5,225 +5,126 @@ class SideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        children: <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ), child: null,
-          ),
-          ExpansionTile(
-            leading: Icon(
-              Icons.home,
-              color: Colors.black
-            ),
-            title: Text("Analysis"),
-          children: <Widget>[
-            GestureDetector(
-              child: SizedBox(
-                width: 250,
-                height: 35,
-                child: Container(
-                  decoration: BoxDecoration(
-                    //color: Colors.black,
-                    //borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Card(child: Center(child: Text("Lineare Gleichungen")))
-                ),
-              ),
-              onTap: () => Navigator.pop(context),
-            ),
-            SizedBox(height: 7,),
-              GestureDetector(
-                child: SizedBox(
-                  width: 250,
-                  height: 35,
-                  child: Container(
+      child:
+        CustomScrollView(
+          physics: NeverScrollableScrollPhysics(),
+          slivers: <Widget>[
+            SliverToBoxAdapter(child:
+              ListView(
+                children: <Widget>[
+                  DrawerHeader(
                     decoration: BoxDecoration(
-                      //color: Colors.black,
-                      //borderRadius: BorderRadius.circular(15),
+                      color: Colors.white,
+                    ), child: null,
+                  ),
+                  ExpansionTile(
+                    leading: Icon(
+                      Icons.home,
+                      color: Colors.black
                     ),
-                    child: Card(child: Center(child: Text("Quadratische Gleichungen")))
-                  ),
-                ),
-                onTap: () => Navigator.pop(context),
-              ),
-            SizedBox(height: 7,),
-            GestureDetector(
-              child: SizedBox(
-                width: 250,
-                height: 35,
-                child: Container(
-                    decoration: BoxDecoration(
-                      //color: Colors.black,
-                      //borderRadius: BorderRadius.circular(15),
+                    title: Text("Analysis"),
+                  children: <Widget>[
+                    GestureDetector(
+                      child: SizedBox(
+                        width: 250,
+                        height: 35,
+                        child: Container(
+                          decoration: BoxDecoration(
+                          //color: Colors.black,
+                          //borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Card(child: Center(child: Text("Lineare Gleichungen")))
+                        ),
+                      ),
+                      onTap: () => Navigator.pop(context),
                     ),
-                    child: Card(child: Center(child: Text("Normalform -> Scheitelpunktform")))
-                ),
-              ),
-              onTap: () => Navigator.pop(context),
-            ),
-            SizedBox(height: 7,),
-            GestureDetector(
-              child: SizedBox(
-                width: 250,
-                height: 35,
-                child: Container(
-                    decoration: BoxDecoration(
-                      //color: Colors.black,
-                      //borderRadius: BorderRadius.circular(15),
+                    SizedBox(height: 7,),
+                      GestureDetector(
+                        child: SizedBox(
+                          width: 250,
+                          height: 35,
+                          child: Container(
+                            decoration: BoxDecoration(
+                            //color: Colors.black,
+                            //borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Card(child: Center(child: Text("Quadratische Gleichungen")))
+                          ),
+                        ),
+                        onTap: () => Navigator.pop(context),
+                      ),
+                    SizedBox(height: 7,),
+                    GestureDetector(
+                      child: SizedBox(
+                        width: 250,
+                        height: 35,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            //color: Colors.black,
+                            //borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Card(child: Center(child: Text("Normalform -> Scheitelpunktform")))
+                        ),
+                      ),
+                      onTap: () => Navigator.pop(context),
                     ),
-                    child: Card(child: Center(child: Text("Scheitelpunktform -> Normalform")))
-                ),
-              ),
-              onTap: () => Navigator.pop(context),
-            ),
-            SizedBox(height: 7,),
-            GestureDetector(
-              child: SizedBox(
-                width: 250,
-                height: 35,
-                child: Container(
-                    decoration: BoxDecoration(
-                      //color: Colors.black,
-                      //borderRadius: BorderRadius.circular(15),
+                    SizedBox(height: 7,),
+                    GestureDetector(
+                      child: SizedBox(
+                        width: 250,
+                        height: 35,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            //color: Colors.black,
+                            //borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Card(child: Center(child: Text("Scheitelpunktform -> Normalform")))
+                        ),
+                      ),
+                      onTap: () => Navigator.pop(context),
                     ),
-                    child: Card(child: Center(child: Text("Ganzrationale Gleichungen")))
-                ),
-              ),
-              onTap: () => Navigator.pop(context),
-            ),
-            ],
-          ),
-          ExpansionTile(
-            leading: Icon(
-                Icons.block,
-                color: Colors.black
-            ),
-            title: Text("Stochastik"),
-            children: <Widget>[Text("Thema 1"), Text("Thema 2")],
-          ),
-        ],
-      ),
-    );
-            /*child: Column(
-              children: [
-                DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ), child: null,
-                ),
-                ListTile(
-                  leading: Icon(
-                    Icons.home,
-                    color: Colors.black
+                    SizedBox(height: 7,),
+                    GestureDetector(
+                      child: SizedBox(
+                        width: 250,
+                        height: 35,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            //color: Colors.black,
+                            //borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Card(child: Center(child: Text("Ganzrationale Gleichungen")))
+                        ),
+                      ),
+                      onTap: () => Navigator.pop(context),
+                    ),
+                    ],
                   ),
-                  title: Text(
-                    'Startseite',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
-                  ),
-                  onTap:  () {
-                  },
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                  Icons.block,
-                  color: Colors.black
-                  ),
-                  title: Text(
-                      'Analysis',
-                      style: TextStyle(color: Colors.black, fontSize: 20)
-                  ),
-                  onTap: () {
-                    Navigator.pop(context);
-
-                  }
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                  Icons.block,
-                  color: Colors.black
-                  ),
-                  title: Text(
-                      'Geometrie',
-                      style: TextStyle(color: Colors.black, fontSize: 20)
-                ),
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
+                  ExpansionTile(
+                    leading: Icon(
                       Icons.block,
                       color: Colors.black
+                    ),
+                    title: Text("Stochastik"),
+                    children: <Widget>[Text("Thema 1"), Text("Thema 2")],
                   ),
-                  title: Text('Wahrscheinlichkeit',
-                      style: TextStyle(color: Colors.black, fontSize: 20)
-                  ),
-                  textColor: Colors.black,
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                      Icons.block,
-                      color: Colors.black),
-                  title: Text('Statistik',
-                      style: TextStyle(color: Colors.black, fontSize: 20)
-                  ),
-                  textColor: Colors.black,
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                      Icons.block,
-                      color: Colors.black),
-                  title: Text('Lineare Algebra',
-                      style: TextStyle(color: Colors.black, fontSize: 20)
-                  ),
-                  textColor: Colors.black,
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                ListTile(
-                  leading: Icon(
-                    Icons.block,
-                    color: Colors.black
-                  ),
-                  title: Text('Graphisch darstellen',
-                      style: TextStyle(color: Colors.black, fontSize: 20)
-                  ),
-                  textColor: Colors.black,
-                ),
-              ],
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-            ),*/
-         /*+),
-        SliverFillRemaining(child :
-          Align(child:
-            ListTile(
-              leading: Icon(Icons.arrow_back,
-              color: Colors.black
+                ],
               ),
-              title: Text('Zurück',
-                  style: TextStyle(color: Colors.black, fontSize: 20)
-              ),
-              textColor: Colors.black,
-              onTap: () => Navigator.pop(context),
             ),
-            alignment: Alignment.bottomCenter,
+          SliverFillRemaining(child :
+            Align(child:
+              ListTile(
+                leading: Icon(Icons.arrow_back,
+                color: Colors.black),
+                title: Text('Zurück',
+                  style: TextStyle(color: Colors.black, fontSize: 20)),
+                textColor: Colors.black,
+                onTap: () => Navigator.pop(context)),
+              alignment: Alignment.bottomCenter),
+              hasScrollBody: false,
             ),
-            hasScrollBody: false,*/
-
+          ]
+        ),
+      );
     }
   }
