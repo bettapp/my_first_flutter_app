@@ -18,7 +18,82 @@ class SideBar extends StatelessWidget {
               color: Colors.black
             ),
             title: Text("Analysis"),
-          children: <Widget>[Text("Lineare Gleichungen"), Text("Quadratische Gleichungen"), Text("Normalform -> Scheitelpunktform"), Text("Scheitelpunktform -> Normalform"), Text("Ganzrationale Gleichungen")],
+          children: <Widget>[
+            GestureDetector(
+              child: SizedBox(
+                width: 250,
+                height: 35,
+                child: Container(
+                  decoration: BoxDecoration(
+                    //color: Colors.black,
+                    //borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Card(child: Center(child: Text("Lineare Gleichungen")))
+                ),
+              ),
+              onTap: () => Navigator.pop(context),
+            ),
+            SizedBox(height: 7,),
+              GestureDetector(
+                child: SizedBox(
+                  width: 250,
+                  height: 35,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      //color: Colors.black,
+                      //borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Card(child: Center(child: Text("Quadratische Gleichungen")))
+                  ),
+                ),
+                onTap: () => Navigator.pop(context),
+              ),
+            SizedBox(height: 7,),
+            GestureDetector(
+              child: SizedBox(
+                width: 250,
+                height: 35,
+                child: Container(
+                    decoration: BoxDecoration(
+                      //color: Colors.black,
+                      //borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Card(child: Center(child: Text("Normalform -> Scheitelpunktform")))
+                ),
+              ),
+              onTap: () => Navigator.pop(context),
+            ),
+            SizedBox(height: 7,),
+            GestureDetector(
+              child: SizedBox(
+                width: 250,
+                height: 35,
+                child: Container(
+                    decoration: BoxDecoration(
+                      //color: Colors.black,
+                      //borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Card(child: Center(child: Text("Scheitelpunktform -> Normalform")))
+                ),
+              ),
+              onTap: () => Navigator.pop(context),
+            ),
+            SizedBox(height: 7,),
+            GestureDetector(
+              child: SizedBox(
+                width: 250,
+                height: 35,
+                child: Container(
+                    decoration: BoxDecoration(
+                      //color: Colors.black,
+                      //borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Card(child: Center(child: Text("Ganzrationale Gleichungen")))
+                ),
+              ),
+              onTap: () => Navigator.pop(context),
+            ),
+            ],
           ),
           ExpansionTile(
             leading: Icon(
