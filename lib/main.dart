@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 //import 'package:flutter_tex/flutter_tex.dart';
 import 'package:catex/catex.dart';
+import 'package:my_first_flutter_app/SideBars/Drawer.dart';
 
 import './calculator.dart';
 import 'SideBars/side_bar.dart';
@@ -172,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     if(selection == 0) {
       return Scaffold(
-        drawer: SideBar(),
+        drawer: SideBar2(),
         appBar: AppBar(
           title: Text('Hauptmenü'),
         ),
