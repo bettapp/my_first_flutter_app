@@ -175,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
       return Scaffold(
         drawer: SideBar2(),
         appBar: AppBar(
-          //title: Text('Hauptmenü'),
+          title: Text('Hauptmenü'),
         ),
         body: Center(
           child: Stack(
