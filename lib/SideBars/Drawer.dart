@@ -51,7 +51,7 @@ class CustomListTile extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(8.0, 0, 8.0, 0),
       child: Container(
         decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.grey.shade400))
+            //border: Border(bottom: BorderSide(color: Colors.grey.shade400))
         ),
         child: InkWell(
           splashColor: Colors.blueAccent,
