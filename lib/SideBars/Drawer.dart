@@ -19,6 +19,7 @@ class SideBar2 extends StatelessWidget {
           CustomListTile("images/Bild4.png", "Scheitelpunktform -> Normalform", ()=>{}),
           CustomListTile("images/Bild4.png", "Ganzrationale Gleichungen", ()=>{}),
           CustomListTile("images/Bild4.png", "Stochastik", ()=>{}),
+          CustomListTile("images/Bild4.png", "Geometrie", ()=>{}),
           Expanded(
               child: Align(
                 alignment: FractionalOffset.bottomCenter,
