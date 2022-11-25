@@ -1,7 +1,11 @@
-# my_first_flutter_app
+# {Project Name}
 
-In this Project we program a calculator application using Flutter/Dart.
+Welcome to our new calculator project!
+
+In this Project we program a calculator application using flutter/dart, that should replace calculators in schools.
 Feel free to Commit!
+
+If you need help with getting started, ask on our discord or see the documentation to flutter below.
 
 !! On creating new Widgets, please include 'drawer: SideBar()' within 'return Scaffold()' to include the navigation bar !! [Why? That's why](https://discord.com/channels/934053813957033994/934053813957033997/935977955719524394)
 
