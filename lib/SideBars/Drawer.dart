@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/main.dart';
 
 class SideBar2 extends StatelessWidget {
 
@@ -29,9 +30,22 @@ class SideBar2 extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: Text("Zurück"),
+                  //onTap: () => Navigator.pop(context),
                   onTap: () => Navigator.pop(context),
-                ),
-              ))
+              ),
+          )),
+          Expanded(child: Align(
+            alignment: FractionalOffset.bottomCenter,
+            child: ListTile(
+              leading: Icon(
+                Icons.house,
+                color: Colors.black,
+              ),
+              title: Text("Home"),
+              //onTap: () => Navigator.pop(context),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'Hauptmenü',)))),
+            ),
+          )
         ],
       ),
     );

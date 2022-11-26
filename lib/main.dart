@@ -5,7 +5,6 @@ import 'package:catex/catex.dart';
 import 'package:my_first_flutter_app/SideBars/Drawer.dart';
 
 import './calculator.dart';
-import 'SideBars/side_bar.dart';
 import './splashscreen.dart';
 
 void main() {
@@ -459,7 +458,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     }
     return Scaffold(
-      drawer: SideBar(),
+      drawer: SideBar2(),
       body: Container(
         child: Text(
           'Something went wrong',
