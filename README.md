@@ -7,7 +7,7 @@ Feel free to Commit!
 
 If you need help with getting started, ask on our discord or see the documentation to flutter below.
 
-!! On creating new Widgets, please include 'drawer: SideBar()' within 'return Scaffold()' to include the navigation bar !! [Why? That's why](https://discord.com/channels/934053813957033994/934053813957033997/935977955719524394)
+!! On creating new Widgets, please include 'drawer: SideBar2()' within 'return Scaffold()' to include the navigation bar !! [Why? That's why](https://discord.com/channels/934053813957033994/934053813957033997/935977955719524394)
 
 ## Contact
 
